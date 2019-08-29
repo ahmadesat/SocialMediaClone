@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">bggcRlvbwQN66aZc3fEtjrAisuqYM67gSRRBlFxH</string>
+    <string name="back4app_client_key">yYXGBblJEdd2l5NYoQLSJk6b32JmUC1YjtMzzGI5
+</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
