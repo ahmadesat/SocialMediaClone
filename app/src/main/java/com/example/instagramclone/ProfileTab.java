@@ -1,6 +1,7 @@
 package com.example.instagramclone;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,7 +26,7 @@ public class ProfileTab extends Fragment {
     private EditText editProfileName,editProfileBio;
     private RadioButton editProfileGender;
     private RadioGroup editGenderList;
-    private Button saveInfoBtn, logoutBtn;
+    private Button saveInfoBtn, logOutBtn;
 
 
     @Override
@@ -44,6 +45,18 @@ public class ProfileTab extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_profile_tab, container, false);
 
+
+        logOutBtn = view.findViewById(R.id.logOutBtn);
+        logOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.getCurrentUser().logOut();
+                Intent intent = new Intent(getContext(), LogIn.class);
+                startActivity(intent);
+            }
+        });
+
+
         editProfileName = view.findViewById(R.id.editProfileName);
         editProfileBio = view.findViewById(R.id.editProfileBio);
         editGenderList = view.findViewById(R.id.editGenderList);
@@ -52,8 +65,16 @@ public class ProfileTab extends Fragment {
         final ParseUser user = ParseUser.getCurrentUser();
 
         //Set the already saved information about the user
-        editProfileName.setText(user.get("Name")+ "");
-        editProfileBio.setText(user.get("Bio") + "");
+        if (user.get("Name") != null){
+            editProfileName.setText(user.get("Name") + "");
+        }else{
+            editProfileName.setText("");
+        }
+        if (user.get("Bio") != null){
+            editProfileBio.setText(user.get("Bio") + "");
+        }else{
+            editProfileBio.setText("");
+        }
 
 
         saveInfoBtn = view.findViewById(R.id.saveInfo);
@@ -63,7 +84,6 @@ public class ProfileTab extends Fragment {
 
                 int genderID = editGenderList.getCheckedRadioButtonId();
                 editProfileGender = view.findViewById(genderID);
-                editProfileGender.setText(user.get("Gender") + "");
 
                 user.put("Name", editProfileName.getText().toString());
                 user.put("Bio", editProfileBio.getText().toString());
