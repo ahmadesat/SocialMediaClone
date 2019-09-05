@@ -30,6 +30,8 @@ public class LogIn extends AppCompatActivity {
             openHomePage();
         }
 
+        setTitle("Sign In");
+
         username_login = findViewById(R.id.username2);
         password_login = findViewById(R.id.password2);
 

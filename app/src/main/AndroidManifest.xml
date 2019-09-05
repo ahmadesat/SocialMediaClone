@@ -15,11 +15,9 @@
             android:name="com.example.socialmediaapp.HomePage"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.socialmediaapp.SignUp"
-            android:label="Create An Account" />
+            android:name="com.example.socialmediaapp.SignUp"/>
         <activity
-            android:name="com.example.socialmediaapp.LogIn"
-            android:label="Sign In">
+            android:name="com.example.socialmediaapp.LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -31,6 +31,8 @@ public class SignUp extends AppCompatActivity {
             ParseUser.getCurrentUser().logOut();
         }
 
+        setTitle("Create An Account");
+
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         email = findViewById(R.id.email);
