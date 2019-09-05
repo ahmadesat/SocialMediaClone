@@ -1,7 +1,6 @@
 package com.example.instagramclone;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,7 +25,7 @@ public class ProfileTab extends Fragment {
     private EditText editProfileName,editProfileBio;
     private RadioButton editProfileGender;
     private RadioGroup editGenderList;
-    private Button saveInfoBtn, logOutBtn;
+    private Button saveInfoBtn;
 
 
     @Override
@@ -44,17 +43,6 @@ public class ProfileTab extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_profile_tab, container, false);
-
-
-        logOutBtn = view.findViewById(R.id.logOutBtn);
-        logOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ParseUser.getCurrentUser().logOut();
-                Intent intent = new Intent(getContext(), LogIn.class);
-                startActivity(intent);
-            }
-        });
 
 
         editProfileName = view.findViewById(R.id.editProfileName);
@@ -109,11 +97,6 @@ public class ProfileTab extends Fragment {
         return view;
     }
 
-//    public void logOutUser(View view){
-//        ParseUser.getCurrentUser().logOut();
-//        Intent intent = new Intent(getContext(), LogIn.class);
-//        startActivity(intent);
-//    }
 
 
 }

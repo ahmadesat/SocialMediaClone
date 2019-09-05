@@ -1,10 +1,15 @@
 package com.example.instagramclone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
+
+import com.parse.ParseUser;
 
 public class HomePage extends AppCompatActivity {
 
@@ -33,4 +38,29 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.my_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.aboutItem){
+
+        }
+
+        else if (item.getItemId() == R.id.logoutUserItem){
+            ParseUser.getCurrentUser().logOut();
+            Intent intent = new Intent(HomePage.this, LogIn.class);
+            startActivity(intent);
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }

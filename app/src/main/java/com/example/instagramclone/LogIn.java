@@ -40,6 +40,7 @@ public class LogIn extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LogIn.this, SignUp.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -85,5 +86,6 @@ public class LogIn extends AppCompatActivity {
     public void openHomePage() {
         Intent intent = new Intent(LogIn.this, HomePage.class);
         startActivity(intent);
+        finish();
     }
 }
