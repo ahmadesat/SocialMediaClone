@@ -48,9 +48,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password2"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="98dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="117dp"
+        android:layout_marginEnd="98dp"
         android:onClick="logIn"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
@@ -58,11 +58,11 @@
 
     <TextView
         android:id="@+id/signupText"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="217dp"
+        android:layout_height="56dp"
         android:layout_below="@+id/loginButton"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="85dp"
         android:text="Don't Have Account Yet? Sign Up Now !"
         android:textAlignment="center"
@@ -75,7 +75,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginEnd="110dp"
         app:srcCompat="@drawable/instaclone_icon" />
 
 </RelativeLayout>
