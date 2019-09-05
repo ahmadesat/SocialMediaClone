@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.instagramclone">
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    package="com.example.socialmediaapp">
 
     <application
-        android:name=".App"
+        android:name="com.example.socialmediaapp.App"
         android:allowBackup="true"
         android:icon="@mipmap/instaclone_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/instaclone_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".HomePage"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-
-        <activity android:name=".SignUp"
-            android:label="Create An Account"/>
-
-
-        <activity android:name=".LogIn"
+        <activity android:name="com.example.socialmediaapp.UserProfile"></activity>
+        <activity
+            android:name="com.example.socialmediaapp.HomePage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.socialmediaapp.SignUp"
+            android:label="Create An Account" />
+        <activity
+            android:name="com.example.socialmediaapp.LogIn"
             android:label="Sign In">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,5 +37,9 @@
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

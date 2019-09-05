@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.socialmediaapp;
 
 
 import android.Manifest;
@@ -104,7 +104,7 @@ public class SharePostTab extends Fragment implements View.OnClickListener{
                         ParseObject parseObject = new ParseObject("Images");
                         parseObject.put("Image", parseFile);
                         parseObject.put("Image_Caption", imageCaption.getText().toString());
-                        parseObject.put("Username", ParseUser.getCurrentUser().getUsername());
+                        parseObject.put("username", ParseUser.getCurrentUser().getUsername());
 
                         final ProgressDialog dialog = new ProgressDialog(getContext());
                         dialog.setMessage("Posting...");

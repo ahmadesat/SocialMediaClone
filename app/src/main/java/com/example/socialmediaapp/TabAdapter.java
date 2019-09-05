@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.socialmediaapp;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

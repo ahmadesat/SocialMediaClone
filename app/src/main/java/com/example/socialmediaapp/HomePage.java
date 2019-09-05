@@ -1,4 +1,4 @@
-package com.example.instagramclone;
+package com.example.socialmediaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import com.parse.ParseUser;
+
+import libs.mjn.prettydialog.PrettyDialog;
+import libs.mjn.prettydialog.PrettyDialogCallback;
 
 public class HomePage extends AppCompatActivity {
 
@@ -51,6 +54,26 @@ public class HomePage extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.aboutItem){
+
+            final PrettyDialog prettyDialog = new PrettyDialog(HomePage.this);
+
+            prettyDialog.setTitle("About This App")
+                    .setMessage("This is my first time" + "\n"
+                            + "experimenting with social media apps" + "\n"
+                            + "Hope You Like It :)" )
+                    .setIcon(R.drawable.info_icon)
+                    .addButton(
+                            "Okay",
+                            R.color.pdlg_color_white,
+                            R.color.colorPrimary,
+                            new PrettyDialogCallback() {
+                                @Override
+                                public void onClick() {
+                                    //What will the button do?
+                                    prettyDialog.dismiss();
+                                }
+                            }
+                    ).show();
 
         }
 

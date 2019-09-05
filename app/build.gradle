@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.instagramclone"
+        applicationId "com.example.socialmediaapp"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -28,4 +28,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.github.parse-community.Parse-SDK-Android:parse:1.18.5'
     implementation 'com.android.support:design:+'
+    implementation 'com.github.mjn1369:prettydialog:1.0.4'
 }
