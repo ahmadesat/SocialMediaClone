@@ -31,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/username2"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="30dp"
@@ -45,14 +44,13 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="174dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/password2"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="135dp"
+        android:layout_marginEnd="117dp"
         android:onClick="logIn"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
@@ -61,7 +59,7 @@
     <TextView
         android:id="@+id/signupText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/loginButton"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
@@ -74,11 +72,10 @@
         android:id="@+id/imageView"
         android:layout_width="143dp"
         android:layout_height="86dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="118dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="21dp"
+        android:layout_marginEnd="124dp"
         app:srcCompat="@drawable/instaclone_icon" />
 
 </RelativeLayout>

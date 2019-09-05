@@ -58,9 +58,9 @@ public class HomePage extends AppCompatActivity {
             final PrettyDialog prettyDialog = new PrettyDialog(HomePage.this);
 
             prettyDialog.setTitle("About This App")
-                    .setMessage("This is my first time" + "\n"
-                            + "experimenting with social media apps" + "\n"
-                            + "Hope You Like It :)" )
+                    .setMessage("This is my first" + "\n"
+                            + "experiment with social media apps" + "\n"
+                            + "Hope You Enjoy It :)" )
                     .setIcon(R.drawable.info_icon)
                     .addButton(
                             "Okay",

@@ -86,10 +86,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="522dp"
+        android:layout_height="469dp"
         android:layout_below="@+id/saveInfo"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="67dp">
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp">
 
         <LinearLayout
             android:id="@+id/linearPosts"
